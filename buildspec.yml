@@ -3,15 +3,16 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20   # Change from 18 to 20 (or latest)
+      nodejs: 20  # Upgraded to avoid npm warnings
     commands:
+      - cd envoi  # <-- Change to the folder with package.json
       - npm install
   build:
     commands:
-      - npm run build
+      - npm run build  # Runs in envoi/ folder
 
 artifacts:
   files:
     - '**/*'
-  base-directory: dist
+  base-directory: envoi/dist  # <-- Output is now envoi/dist/
   discard-paths: yes
