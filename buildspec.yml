@@ -1,15 +1,17 @@
 version: 0.2
+
 phases:
   install:
     runtime-versions:
-      nodejs: 18   # or 20, depending on your project
+      nodejs: 20   # Change from 18 to 20 (or latest)
     commands:
       - npm install
   build:
     commands:
-      - npm run build   # this creates your dist/build folder
+      - npm run build
+
 artifacts:
   files:
     - '**/*'
-  base-directory: dist   # or 'build' for Create React App, 'out' for Next.js, etc.
+  base-directory: dist
   discard-paths: yes
