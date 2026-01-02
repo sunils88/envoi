@@ -1,18 +1,10 @@
 version: 0.2
 
 phases:
-  install:
-    runtime-versions:
-      nodejs: 20  # Upgraded to avoid npm warnings
-    commands:
-      - cd envoi  # <-- Change to the folder with package.json
-      - npm install
   build:
     commands:
-      - npm run build  # Runs in envoi/ folder
+      - echo "Static build - nothing to compile"
 
 artifacts:
   files:
-    - '**/*'
-  base-directory: envoi/dist  # <-- Output is now envoi/dist/
-  discard-paths: yes
+    - index.html
