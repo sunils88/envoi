@@ -3,7 +3,7 @@ version: 0.2
 phases:
   build:
     commands:
-      - echo "Static build - nothing to compile"
+      - echo "Static site – no build step required"
 
 artifacts:
   files:
